@@ -9,7 +9,18 @@ If you change the configuration file please specify
 
  
 ## <a name="input">Requirements for input</a>
-Input data details
+
+Input schema is given below:
+ 
+```
+ |-- partNumber: string (nullable = true)
+ |-- timeStamp: string (nullable = true)
+ |-- xAxis: array (nullable = true)
+ |    |-- element: double (containsNull = false)
+ |-- yAxis: array (nullable = true)
+ |    |-- element: double (containsNull = false)
+
+```
 
 
 ## <a name="output">Output</a>

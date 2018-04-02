@@ -85,7 +85,7 @@ import org.slf4j.{Logger, LoggerFactory}
     assertResult(12) {
       df_result.filter((col("yAxis_features_group").contains("max") || col("yAxis_features_group").contains("min") || col("yAxis_features_group").contains("var") || col("yAxis_features_group").contains("mean") || col("yAxis_features_group").contains("std") || col("yAxis_features_group").contains("slope")) && col("partNumber") === "75029551647502955164E05091600072505").count()
     }
-    df_result.show(false)
+    
   }
 
   @Test def SimpleTestCutoff(): Unit = {
@@ -161,8 +161,6 @@ import org.slf4j.{Logger, LoggerFactory}
       df_result1.filter((col("yAxis_features_group").contains("max") || col("yAxis_features_group").contains("min") || col("yAxis_features_group").contains("var") || col("yAxis_features_group").contains("mean") || col("yAxis_features_group").contains("std") || col("yAxis_features_group").contains("slope")) && col("partNumber") === "75029551647502955164E05091600072504").count()
     }
 
-    df_result1.show(false)
-    df_result1.printSchema()
   }
 
   case class FourColumns(partNumber: String, timeStamp: String, xAxis: Array[Double], yAxis: Array[Double])
